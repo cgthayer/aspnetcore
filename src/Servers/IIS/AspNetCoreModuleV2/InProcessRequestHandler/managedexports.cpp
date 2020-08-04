@@ -589,4 +589,15 @@ http_response_set_trailer(
     IHttpResponse4* pHttpResponse = (IHttpResponse4*)pInProcessHandler->QueryHttpContext()->GetResponse();
     return pHttpResponse->SetTrailer(pszHeaderName, pszHeaderValue, usHeaderValueLength, fReplace);
 }
+
+EXTERN_C __MIDL_DECLSPEC_DLLEXPORT
+HRESULT
+http_response_set_need_goaway(
+    _In_ IN_PROCESS_HANDLER* pInProcessHandler
+    )
+{
+    IHttpResponse4* pHttpResponse = (IHttpResponse4*)pInProcessHandler->QueryHttpContext()->GetResponse();
+    pHttpResponse->SetNeedGoAway();
+    return 0;
+}
 // End of export
