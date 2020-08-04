@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsShipping>false</IsShipping>
+    <IsProjectReferenceProvider>false</IsProjectReferenceProvider>
+    <LeaveMyAspNetCoreAppAlone>true</LeaveMyAspNetCoreAppAlone>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <EmbeddedResource Include="WebSocketScriptInjection.js" />
+  </ItemGroup>
+
+</Project>
